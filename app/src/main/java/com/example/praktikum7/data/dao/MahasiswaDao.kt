@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MahasiswaDao {
     //Fungsi get all data
-    @Query("select * from mahasiswa")
+    @Query("SELECT * FROM mahasiswa ORDER BY nama ASC ")
     fun getAllMahasiswa() = Flow<List<Mahasiswa>>
 
     @Insert //Selain insert bisa update dsb
