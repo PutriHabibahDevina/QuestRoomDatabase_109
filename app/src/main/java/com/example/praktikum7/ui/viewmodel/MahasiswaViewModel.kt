@@ -52,10 +52,10 @@ class MahasiswaViewModel(private val repositoryMhs: RepositoryMhs) : ViewModel()
                 }
             }
         }
-        //Reset pesan Snackbar setelah ditampilkan
-        fun resetSnackBarMessage(){
-            uiState = uiState.copy(snackBarMessage = null)
-        }
+    }
+    //Reset pesan Snackbar setelah ditampilkan
+    fun resetSnackBarMessage(){
+        uiState = uiState.copy(snackBarMessage = null)
     }
 }
 
