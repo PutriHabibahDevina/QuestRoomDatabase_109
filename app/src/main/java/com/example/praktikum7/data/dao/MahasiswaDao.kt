@@ -12,12 +12,12 @@ import kotlinx.coroutines.flow.Flow
 interface MahasiswaDao {
     //Fungsi get all data
     @Query("SELECT * FROM mahasiswa ORDER BY nama ASC ")
-    fun getAllMahasiswa() = Flow<List<Mahasiswa>>
+    fun getAllMahasiswa(): Flow<List<Mahasiswa>>
 
     @Insert
     suspend fun insertMahasiswa(mahasiswa: Mahasiswa)
 
-    @Query("SELECT * FROM mahasiswa WHERE nim =: nim ")
+    @Query("SELECT * FROM mahasiswa WHERE nim = :nim ")
     fun getMahasiswa(nim: String): Flow<Mahasiswa>
 
     @Delete
