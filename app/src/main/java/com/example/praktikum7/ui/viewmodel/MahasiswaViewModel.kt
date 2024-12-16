@@ -6,10 +6,10 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.praktikum7.data.entity.Mahasiswa
-import com.example.praktikum7.repository.LocalRepositoryMhs
+import com.example.praktikum7.repository.RepositoryMhs
 import kotlinx.coroutines.launch
 
-class MahasiswaViewModel(private val repositoryMhs: LocalRepositoryMhs) : ViewModel()
+class MahasiswaViewModel(private val repositoryMhs: RepositoryMhs) : ViewModel()
 {
     var uiState by mutableStateOf(MhsUIState())
 
